@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 {% block main %}
-
      <div class="container">
-         {% include 'partial/issue_form.html' %}
+         {% if issues %}
+            <div class="row">
+                {% for el in issues %}
+                    <div class="card block">
+                      <h5 class="card-header">{{ el.summary }}</h5>
+                      <div class="card-body">
+                        <h5 class="card-title">{{ el.description }}</h5>
+                        <p class="card-text">{{ el.status }}</p>
+                        <p class="card-text">{{ el.type }}</p>
+                        <a href="#" class="btn btn-secondary">see more>>></a>
+                      </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h2>Add issue</h2>
+        {% endif %}
      </div>
-
 {% endblock %}
