@@ -1,0 +1,146 @@
+[
+{
+  "model": "webapp.issue",
+  "pk": 1,
+  "fields": {
+    "summary": "Add title",
+    "description": "Add title in field Create for table atything",
+    "status": 2,
+    "type": 2,
+    "created_at": "2022-10-06T05:34:00.836Z",
+    "updated_at": "2022-10-06T05:34:00.837Z"
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 2,
+  "fields": {
+    "summary": "Read book",
+    "description": "Read book Read book description",
+    "status": 3,
+    "type": 1,
+    "created_at": "2022-10-06T05:38:12.152Z",
+    "updated_at": "2022-10-06T05:38:12.152Z"
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 3,
+  "fields": {
+    "summary": "start learning english",
+    "description": "Found course about learning english",
+    "status": 1,
+    "type": 2,
+    "created_at": "2022-10-06T05:45:31.425Z",
+    "updated_at": "2022-10-06T05:45:31.425Z"
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 4,
+  "fields": {
+    "summary": "Issue 32",
+    "description": "Description issue 32",
+    "status": 3,
+    "type": 3,
+    "created_at": "2022-10-06T05:45:53.652Z",
+    "updated_at": "2022-10-06T05:45:53.652Z"
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 5,
+  "fields": {
+    "summary": "Issue 234",
+    "description": "Description issue 234",
+    "status": 1,
+    "type": 1,
+    "created_at": "2022-10-06T05:47:12.869Z",
+    "updated_at": "2022-10-06T05:47:12.870Z"
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 6,
+  "fields": {
+    "summary": "To buy a car",
+    "description": "find my dream car",
+    "status": 2,
+    "type": 2,
+    "created_at": "2022-10-06T05:48:39.082Z",
+    "updated_at": "2022-10-06T05:48:39.082Z"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 1,
+  "fields": {
+    "title": "New",
+    "created_at": "2022-10-06T05:31:09.578Z",
+    "updated_at": "2022-10-06T05:31:09.578Z"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 2,
+  "fields": {
+    "title": "In progress",
+    "created_at": "2022-10-06T05:31:35.805Z",
+    "updated_at": "2022-10-06T05:31:35.805Z"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 3,
+  "fields": {
+    "title": "Done",
+    "created_at": "2022-10-06T05:31:44.416Z",
+    "updated_at": "2022-10-06T05:31:44.416Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "title": "Task",
+    "created_at": "2022-10-06T05:31:56.850Z",
+    "updated_at": "2022-10-06T05:31:56.850Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "title": "Bug",
+    "created_at": "2022-10-06T05:32:05.470Z",
+    "updated_at": "2022-10-06T05:32:05.470Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "title": "Enhancement",
+    "created_at": "2022-10-06T05:32:18.797Z",
+    "updated_at": "2022-10-06T05:32:18.797Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$T501b3PCe5125AXH3NYWkQ$XlscSVo3lc1hV8Mr9WMt4aBhsdCOrkxqwh27+USjjPg=",
+    "last_login": "2022-10-06T05:43:52.938Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-06T04:03:16.299Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
