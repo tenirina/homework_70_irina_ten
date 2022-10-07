@@ -10,9 +10,7 @@ class IssueView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
         context['issue'] = get_object_or_404(Issue, pk=kwargs['pk'])
-        print(context['issue'].type)
         return context
 
 
@@ -27,7 +25,7 @@ class AddView(TemplateView):
         context['statuses'] = stats
         types = []
         for el in Type.objects.all():
-            types.append((el.pk, el.title))
+            types.append(el)
         context['types'] = types
         return context
 
@@ -38,6 +36,7 @@ class AddView(TemplateView):
             issue = Issue.objects.create(**form.cleaned_data)
             issue.type.set(types)
             issue.save()
+            print(issue.type.all())
             return redirect('issue_detail', pk=issue.pk)
         context = self.get_context_data(**kwargs)
         context['form'] = form
@@ -62,7 +61,7 @@ class UpdateView(TemplateView):
         context['statuses'] = stats
         types = []
         for el in Type.objects.all():
-            types.append((el.pk, el.title))
+            types.append(el)
         context['types'] = types
         context['issue'] = get_object_or_404(Issue, pk=kwargs['pk'])
         return context
@@ -76,8 +75,11 @@ class UpdateView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         issue = get_object_or_404(Issue, pk=kwargs['pk'])
-        form = IssueForm(request.POST, instance=issue)
+        form = IssueForm(request.POST, instance=issue, initial={'type': issue.type.all()})
         if form.is_valid():
+            types = form.cleaned_data.pop('type')
+            issue.type.set(types)
+            issue.save()
             form.save()
             return redirect('issue_detail', pk=kwargs['pk'])
         context = self.get_context_data(**kwargs)

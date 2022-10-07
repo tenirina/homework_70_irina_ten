@@ -1,77 +1,5 @@
 [
 {
-  "model": "webapp.issue",
-  "pk": 1,
-  "fields": {
-    "summary": "Add title",
-    "description": "Add title in field Create for table atything",
-    "status": 2,
-    "type": 2,
-    "created_at": "2022-10-06T05:34:00.836Z",
-    "updated_at": "2022-10-06T05:34:00.837Z"
-  }
-},
-{
-  "model": "webapp.issue",
-  "pk": 2,
-  "fields": {
-    "summary": "Read book",
-    "description": "Read book Read book description",
-    "status": 3,
-    "type": 1,
-    "created_at": "2022-10-06T05:38:12.152Z",
-    "updated_at": "2022-10-06T05:38:12.152Z"
-  }
-},
-{
-  "model": "webapp.issue",
-  "pk": 3,
-  "fields": {
-    "summary": "start learning english",
-    "description": "Found course about learning english",
-    "status": 1,
-    "type": 2,
-    "created_at": "2022-10-06T05:45:31.425Z",
-    "updated_at": "2022-10-06T05:45:31.425Z"
-  }
-},
-{
-  "model": "webapp.issue",
-  "pk": 4,
-  "fields": {
-    "summary": "Issue 32",
-    "description": "Description issue 32",
-    "status": 3,
-    "type": 3,
-    "created_at": "2022-10-06T05:45:53.652Z",
-    "updated_at": "2022-10-06T05:45:53.652Z"
-  }
-},
-{
-  "model": "webapp.issue",
-  "pk": 5,
-  "fields": {
-    "summary": "Issue 234",
-    "description": "Description issue 234",
-    "status": 1,
-    "type": 1,
-    "created_at": "2022-10-06T05:47:12.869Z",
-    "updated_at": "2022-10-06T05:47:12.870Z"
-  }
-},
-{
-  "model": "webapp.issue",
-  "pk": 6,
-  "fields": {
-    "summary": "To buy a car",
-    "description": "find my dream car",
-    "status": 2,
-    "type": 2,
-    "created_at": "2022-10-06T05:48:39.082Z",
-    "updated_at": "2022-10-06T05:48:39.082Z"
-  }
-},
-{
   "model": "webapp.status",
   "pk": 1,
   "fields": {
@@ -123,6 +51,257 @@
     "title": "Enhancement",
     "created_at": "2022-10-06T05:32:18.797Z",
     "updated_at": "2022-10-06T05:32:18.797Z"
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 3,
+  "fields": {
+    "summary": "start learning english",
+    "description": "Found course about learning english",
+    "created_at": "2022-10-06T05:45:31.425Z",
+    "updated_at": "2022-10-07T11:47:21.455Z",
+    "status": 1,
+    "type": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 4,
+  "fields": {
+    "summary": "Issue 32",
+    "description": "Description issue 32",
+    "created_at": "2022-10-06T05:45:53.652Z",
+    "updated_at": "2022-10-07T12:29:16.147Z",
+    "status": 1,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 6,
+  "fields": {
+    "summary": "To buy a car",
+    "description": "find my dream car",
+    "created_at": "2022-10-06T05:48:39.082Z",
+    "updated_at": "2022-10-06T05:48:39.082Z",
+    "status": 2,
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 7,
+  "fields": {
+    "summary": "Add title",
+    "description": "23",
+    "created_at": "2022-10-07T07:00:43.462Z",
+    "updated_at": "2022-10-07T07:00:43.462Z",
+    "status": 1,
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 8,
+  "fields": {
+    "summary": "Read book cccc",
+    "description": "ddedmmff  kfkfkkf  fkkkfff",
+    "created_at": "2022-10-07T07:10:31.841Z",
+    "updated_at": "2022-10-07T07:10:31.841Z",
+    "status": 2,
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 9,
+  "fields": {
+    "summary": "Issue 321",
+    "description": "dddddddc ddddddddd ddddddd",
+    "created_at": "2022-10-07T07:28:19.435Z",
+    "updated_at": "2022-10-07T07:28:19.435Z",
+    "status": 1,
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 10,
+  "fields": {
+    "summary": "Add title",
+    "description": "Add title in field Create for table atything",
+    "created_at": "2022-10-07T07:56:23.984Z",
+    "updated_at": "2022-10-07T07:56:23.985Z",
+    "status": 1,
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 11,
+  "fields": {
+    "summary": "Read book",
+    "description": "12",
+    "created_at": "2022-10-07T12:06:11.005Z",
+    "updated_at": "2022-10-07T12:06:11.005Z",
+    "status": 2,
+    "type": []
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 12,
+  "fields": {
+    "summary": "Read book",
+    "description": "123",
+    "created_at": "2022-10-07T12:06:23.046Z",
+    "updated_at": "2022-10-07T12:06:23.071Z",
+    "status": 2,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 13,
+  "fields": {
+    "summary": "Read book",
+    "description": "24",
+    "created_at": "2022-10-07T12:07:02.867Z",
+    "updated_at": "2022-10-07T12:07:02.896Z",
+    "status": 2,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 14,
+  "fields": {
+    "summary": "Read book",
+    "description": "24",
+    "created_at": "2022-10-07T12:07:17.832Z",
+    "updated_at": "2022-10-07T12:07:17.846Z",
+    "status": 2,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 15,
+  "fields": {
+    "summary": "Read book",
+    "description": "12",
+    "created_at": "2022-10-07T12:07:39.967Z",
+    "updated_at": "2022-10-07T12:07:39.990Z",
+    "status": 2,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 16,
+  "fields": {
+    "summary": "Read book",
+    "description": "12",
+    "created_at": "2022-10-07T12:07:56.013Z",
+    "updated_at": "2022-10-07T12:07:56.042Z",
+    "status": 2,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 17,
+  "fields": {
+    "summary": "Read book",
+    "description": "12",
+    "created_at": "2022-10-07T12:09:42.485Z",
+    "updated_at": "2022-10-07T12:09:42.512Z",
+    "status": 2,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 18,
+  "fields": {
+    "summary": "Read book",
+    "description": "12",
+    "created_at": "2022-10-07T12:09:56.348Z",
+    "updated_at": "2022-10-07T12:09:56.378Z",
+    "status": 2,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 19,
+  "fields": {
+    "summary": "Add title",
+    "description": "rtf",
+    "created_at": "2022-10-07T12:22:07.035Z",
+    "updated_at": "2022-10-07T12:22:07.100Z",
+    "status": 3,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 20,
+  "fields": {
+    "summary": "Add title",
+    "description": "rtf",
+    "created_at": "2022-10-07T12:22:26.382Z",
+    "updated_at": "2022-10-07T12:22:26.408Z",
+    "status": 3,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 21,
+  "fields": {
+    "summary": "Add title ddd",
+    "description": "sss  vvvvvvvvvvvvvv",
+    "created_at": "2022-10-07T12:41:23.915Z",
+    "updated_at": "2022-10-07T12:41:23.941Z",
+    "status": 3,
+    "type": [
+      1,
+      2
+    ]
   }
 },
 {

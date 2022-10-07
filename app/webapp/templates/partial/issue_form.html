@@ -31,11 +31,11 @@
             <div class="row g-2 align-items-start">
                  <label for="type">Type: </label>
                  <select multiple name="type" id="type">
-                     {% for type in types%}
-                        {% if issue.type.pk == type.0 %}
-                            <option value="{{type.0}}" selected>{{type.1}}</option>
+                     {% for type in types %}
+                        {% if type in issue.type.all %}
+                            <option value="{{type.pk}}" selected>{{type.title}}</option>
                          {% else %}
-                             <option value="{{type.0}}" >{{type.1}}</option>
+                             <option value="{{type.pk}}" >{{type.title}}</option>
                          {% endif %}
                      {% endfor %}
                  </select>

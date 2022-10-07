@@ -10,8 +10,6 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['issues'] = Issue.objects.all()
-        for el in context['issues']:
-            print(el.type)
         return context
 
 

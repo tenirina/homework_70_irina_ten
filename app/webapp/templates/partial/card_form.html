@@ -4,6 +4,6 @@
           <h5 class="card-title" name="summary">{{ issue.summary }}</h5>
           <p class="card-text" name="description">{{ issue.description }}</p>
           <p class="card-text" name="status">{{ issue.status.title }}</p>
-          <p class="card-text" name="type">{{ issue.type.title }}</p>
+          <p class="card-text" name="type">{% for type in issue.type.all %}{{ type.title }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
        </div>
      </div>
