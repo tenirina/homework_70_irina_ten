@@ -8,8 +8,8 @@
                       <h5 class="card-header">{{ el.summary }}</h5>
                       <div class="card-body">
                         <h5 class="card-title">{{ el.description }}</h5>
-                        <p class="card-text">{{ el.status }}</p>
-                        <p class="card-text">{{ el.type }}</p>
+                        <p class="card-text">{{ el.status.title }}</p>
+                        <p class="card-text">{{ el.type.title }}</p>
                         <a href="{% url 'issue_detail' el.pk %}" class="btn btn-secondary">see more>>></a>
                       </div>
                     </div>

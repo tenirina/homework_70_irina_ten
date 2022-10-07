@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<h1>New issue</h1>
+<form data-actions-icnt="{% url 'add_issue' %}" method="POST">
+    {% include 'partial/issue_form.html' with button_text="Create" %}
+</form>
+
+{% endblock %}
