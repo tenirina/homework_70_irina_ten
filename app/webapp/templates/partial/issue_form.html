@@ -1,6 +1,44 @@
-{% load django_bootstrap5 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-{% bootstrap_messages %}
-
-{% bootstrap_form form %}
+{% csrf_token %}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row g-2 align-items-start">
+                <label for="summary" class="form-label">Summary</label>
+                <input name="summary" value="{{issue.summary}}" type="text" class="form-control" id="summary">
+            </div>
+            <br>
+            <div class="row g-2 align-items-start">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="description" class="form-control" id="description">{{issue.description}}</textarea>
+            </div>
+            <div class="row g-2 align-items-start">
+                 <label for="status">Status: </label>
+                 <select name="status" id="status">
+                     {% for status in statuses%}
+                        {% if issue.status == status.0 %}
+                            <option value="{{status.o}}" selected>{{status.1}}</option>
+                         {% else %}
+                             <option value="{{status.o}}" >{{status.1}}</option>
+                         {% endif %}
+                     {% endfor %}
+                 </select>
+            </div>
+            <div class="row g-2 align-items-start">
+                 <label for="type">Type: </label>
+                 <select name="type" id="type">
+                     {% for type in types%}
+                        {% if issue.type == type.0 %}
+                            <option value="{{type.o}}" selected>{{type.1}}</option>
+                         {% else %}
+                             <option value="{{type.o}}" >{{type.1}}</option>
+                         {% endif %}
+                     {% endfor %}
+                 </select>
+            </div>
+            <br>
+            <div class="col-3">
+                <button type="submit" class="btn btn-secondary">{{button_text}}</button>
+            </div>
+        </div>
+    </div>
+</div>

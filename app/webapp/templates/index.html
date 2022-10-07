@@ -10,7 +10,7 @@
                         <h5 class="card-title">{{ el.description }}</h5>
                         <p class="card-text">{{ el.status }}</p>
                         <p class="card-text">{{ el.type }}</p>
-                        <a href="#" class="btn btn-secondary">see more>>></a>
+                        <a href="{% url 'issue_detail' el.pk %}" class="btn btn-secondary">see more>>></a>
                       </div>
                     </div>
                 {% endfor %}
