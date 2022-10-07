@@ -5,12 +5,13 @@
             <div class="row">
                 {% for el in issues %}
                     <div class="card block">
-                      <h5 class="card-header">{{ el.summary }}</h5>
+                      <h5 class="card-header"><a href="{% url 'issue_detail' el.pk %}">{{ el.summary }}</a></h5>
                       <div class="card-body">
                         <h5 class="card-title">{{ el.description }}</h5>
                         <p class="card-text">{{ el.status.title }}</p>
                         <p class="card-text">{{ el.type.title }}</p>
-                        <a href="{% url 'issue_detail' el.pk %}" class="btn btn-secondary">see more>>></a>
+                        <a href="{% url 'update_issue' el.pk %}" class="btn btn-secondary">Update issue</a>
+                        <a href="{% url 'update_issue' el.pk %}" class="btn btn-secondary" method="POST">Delete issue</a>
                       </div>
                     </div>
                 {% endfor %}

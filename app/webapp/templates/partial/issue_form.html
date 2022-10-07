@@ -20,7 +20,7 @@
                  <label for="status">Status: </label>
                  <select name="status" id="status">
                      {% for status in statuses%}
-                        {% if issue.status == status.0 %}
+                        {% if issue.status.pk == status.0 %}
                             <option value="{{status.0}}" selected>{{status.1}}</option>
                          {% else %}
                              <option value="{{status.0}}" >{{status.1}}</option>
@@ -32,7 +32,7 @@
                  <label for="type">Type: </label>
                  <select name="type" id="type">
                      {% for type in types%}
-                        {% if issue.type == type.0 %}
+                        {% if issue.type.pk == type.0 %}
                             <option value="{{type.0}}" selected>{{type.1}}</option>
                          {% else %}
                              <option value="{{type.0}}" >{{type.1}}</option>
