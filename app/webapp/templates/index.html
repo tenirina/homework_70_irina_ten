@@ -11,7 +11,7 @@
                         <p class="card-text">{{ el.status.title }}</p>
                         <p class="card-text">{{ el.type.title }}</p>
                         <a href="{% url 'update_issue' el.pk %}" class="btn btn-secondary">Update issue</a>
-                        <a href="{% url 'update_issue' el.pk %}" class="btn btn-secondary" method="POST">Delete issue</a>
+                        <a href="{% url 'delete_issue' el.pk %}" class="btn btn-secondary">Delete issue</a>
                       </div>
                     </div>
                 {% endfor %}

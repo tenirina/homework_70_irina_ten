@@ -30,7 +30,7 @@
             </div>
             <div class="row g-2 align-items-start">
                  <label for="type">Type: </label>
-                 <select name="type" id="type">
+                 <select multiple name="type" id="type">
                      {% for type in types%}
                         {% if issue.type.pk == type.0 %}
                             <option value="{{type.0}}" selected>{{type.1}}</option>

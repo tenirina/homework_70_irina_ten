@@ -7,4 +7,4 @@ class Issue(models.Model):
     created_at = models.DateTimeField(verbose_name='Date of created', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='Date of updates', auto_now=True)
     status = models.ForeignKey(verbose_name="Status", to='webapp.Status', related_name='issue', on_delete=models.CASCADE)
-    type = models.ManyToManyField(to='webapp.Type', through='webapp.IssueType', through_fields=('issue', 'type'), related_name='issue', default='task')
+    type = models.ManyToManyField(to='webapp.Type', related_name='issue', default='task')

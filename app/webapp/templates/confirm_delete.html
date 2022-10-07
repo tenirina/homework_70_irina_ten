@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<div class="container">
+     <h2> Delete issue?</h2>
+     {% include 'partial/card_form.html' %}
+     <form data-actions-icnt="{% url 'delete_issue' issue.pk %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-secondary">Delete</button>
+          <a type="submit" class="btn btn-secondary" href="{% url 'index' %}">Cancel</a>
+     </form>
+</div>
+
+{% endblock %}
