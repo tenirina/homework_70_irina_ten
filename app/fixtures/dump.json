@@ -59,9 +59,11 @@
   "fields": {
     "summary": "start learning english",
     "description": "Found course about learning english",
-    "created_at": "2022-10-06T05:45:31.425Z",
+    "created_at": "2022-09-06T05:45:31.425Z",
     "updated_at": "2022-10-07T11:47:21.455Z",
     "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       1,
       2
@@ -74,9 +76,11 @@
   "fields": {
     "summary": "Issue 32",
     "description": "Description issue 32",
-    "created_at": "2022-10-06T05:45:53.652Z",
+    "created_at": "2022-03-06T05:45:53.652Z",
     "updated_at": "2022-10-07T12:29:16.147Z",
     "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       2
     ]
@@ -91,6 +95,8 @@
     "created_at": "2022-10-06T05:48:39.082Z",
     "updated_at": "2022-10-06T05:48:39.082Z",
     "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": []
   }
 },
@@ -98,11 +104,13 @@
   "model": "webapp.issue",
   "pk": 7,
   "fields": {
-    "summary": "Add title",
+    "summary": "Add title bug",
     "description": "23",
-    "created_at": "2022-10-07T07:00:43.462Z",
+    "created_at": "2022-09-07T07:00:43.462Z",
     "updated_at": "2022-10-07T07:00:43.462Z",
     "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": []
   }
 },
@@ -111,10 +119,12 @@
   "pk": 8,
   "fields": {
     "summary": "Read book cccc",
-    "description": "ddedmmff  kfkfkkf  fkkkfff",
+    "description": "ddedmmff  kfkfkkf  fkkkfff cccc",
     "created_at": "2022-10-07T07:10:31.841Z",
-    "updated_at": "2022-10-07T07:10:31.841Z",
+    "updated_at": "2022-10-11T07:10:31.841Z",
     "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": []
   }
 },
@@ -127,6 +137,8 @@
     "created_at": "2022-10-07T07:28:19.435Z",
     "updated_at": "2022-10-07T07:28:19.435Z",
     "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": []
   }
 },
@@ -139,6 +151,8 @@
     "created_at": "2022-10-07T07:56:23.984Z",
     "updated_at": "2022-10-07T07:56:23.985Z",
     "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": []
   }
 },
@@ -146,27 +160,14 @@
   "model": "webapp.issue",
   "pk": 11,
   "fields": {
-    "summary": "Read book",
+    "summary": "Read book buggg",
     "description": "12",
     "created_at": "2022-10-07T12:06:11.005Z",
-    "updated_at": "2022-10-07T12:06:11.005Z",
-    "status": 2,
+    "updated_at": "2022-10-11T04:54:13.881Z",
+    "status": 3,
+    "deleted_at": "2022-10-11T04:54:13.880Z",
+    "is_deleted": true,
     "type": []
-  }
-},
-{
-  "model": "webapp.issue",
-  "pk": 12,
-  "fields": {
-    "summary": "Read book",
-    "description": "123",
-    "created_at": "2022-10-07T12:06:23.046Z",
-    "updated_at": "2022-10-07T12:06:23.071Z",
-    "status": 2,
-    "type": [
-      2,
-      3
-    ]
   }
 },
 {
@@ -174,10 +175,12 @@
   "pk": 13,
   "fields": {
     "summary": "Read book",
-    "description": "24",
+    "description": "Read book",
     "created_at": "2022-10-07T12:07:02.867Z",
-    "updated_at": "2022-10-07T12:07:02.896Z",
+    "updated_at": "2022-10-11T04:50:07.981Z",
     "status": 2,
+    "deleted_at": "2022-10-11T04:50:07.981Z",
+    "is_deleted": true,
     "type": [
       2,
       3
@@ -188,11 +191,13 @@
   "model": "webapp.issue",
   "pk": 14,
   "fields": {
-    "summary": "Read book",
-    "description": "24",
+    "summary": "Read book bug",
+    "description": "Read book",
     "created_at": "2022-10-07T12:07:17.832Z",
     "updated_at": "2022-10-07T12:07:17.846Z",
     "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       2,
       3
@@ -204,10 +209,12 @@
   "pk": 15,
   "fields": {
     "summary": "Read book",
-    "description": "12",
+    "description": "12 repeat",
     "created_at": "2022-10-07T12:07:39.967Z",
     "updated_at": "2022-10-07T12:07:39.990Z",
-    "status": 2,
+    "status": 3,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       2,
       3
@@ -223,21 +230,8 @@
     "created_at": "2022-10-07T12:07:56.013Z",
     "updated_at": "2022-10-07T12:07:56.042Z",
     "status": 2,
-    "type": [
-      2,
-      3
-    ]
-  }
-},
-{
-  "model": "webapp.issue",
-  "pk": 17,
-  "fields": {
-    "summary": "Read book",
-    "description": "12",
-    "created_at": "2022-10-07T12:09:42.485Z",
-    "updated_at": "2022-10-07T12:09:42.512Z",
-    "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       2,
       3
@@ -249,10 +243,12 @@
   "pk": 18,
   "fields": {
     "summary": "Read book",
-    "description": "12",
+    "description": "repeat for me please ",
     "created_at": "2022-10-07T12:09:56.348Z",
     "updated_at": "2022-10-07T12:09:56.378Z",
     "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       2,
       3
@@ -268,6 +264,8 @@
     "created_at": "2022-10-07T12:22:07.035Z",
     "updated_at": "2022-10-07T12:22:07.100Z",
     "status": 3,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       2,
       3
@@ -283,6 +281,8 @@
     "created_at": "2022-10-07T12:22:26.382Z",
     "updated_at": "2022-10-07T12:22:26.408Z",
     "status": 3,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
       2,
       3
@@ -291,15 +291,97 @@
 },
 {
   "model": "webapp.issue",
-  "pk": 21,
+  "pk": 22,
   "fields": {
-    "summary": "Add title ddd",
-    "description": "sss  vvvvvvvvvvvvvv",
-    "created_at": "2022-10-07T12:41:23.915Z",
-    "updated_at": "2022-10-07T12:41:23.941Z",
-    "status": 3,
+    "summary": "ssss",
+    "description": "sssssssssssssss",
+    "created_at": "2022-10-11T04:18:52.681Z",
+    "updated_at": "2022-10-11T04:18:52.714Z",
+    "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
     "type": [
-      1,
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 23,
+  "fields": {
+    "summary": "Add books",
+    "description": "Add books",
+    "created_at": "2022-10-11T05:07:54.306Z",
+    "updated_at": "2022-10-11T05:07:54.326Z",
+    "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 24,
+  "fields": {
+    "summary": "start learning english",
+    "description": "ssssssss",
+    "created_at": "2022-10-11T05:08:44.635Z",
+    "updated_at": "2022-10-11T05:08:44.679Z",
+    "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 25,
+  "fields": {
+    "summary": "Issue 234",
+    "description": "Issue 123",
+    "created_at": "2022-10-11T05:09:28.876Z",
+    "updated_at": "2022-10-11T05:09:28.905Z",
+    "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 26,
+  "fields": {
+    "summary": "start learning english",
+    "description": "aassssss dfffffffff fffffffffffff ffffffffffffffff",
+    "created_at": "2022-10-11T05:10:07.760Z",
+    "updated_at": "2022-10-11T11:54:01.314Z",
+    "status": 1,
+    "deleted_at": null,
+    "is_deleted": false,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.issue",
+  "pk": 27,
+  "fields": {
+    "summary": "start learning english",
+    "description": "xxxxxxxxxxx ffffffffff fffffffffffffffff",
+    "created_at": "2022-10-11T11:53:29.567Z",
+    "updated_at": "2022-10-11T11:53:29.590Z",
+    "status": 2,
+    "deleted_at": null,
+    "is_deleted": false,
+    "type": [
       2
     ]
   }
