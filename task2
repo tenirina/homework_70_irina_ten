@@ -1,0 +1,20 @@
+1) Закрытые задачи за последний месяц от текущей даты (вхождение определяйте по дате последнего обновления).
+
+from webapp.models import *
+from datetime import timedelta
+from datetime
+now_date=datetime.datetime.now()
+queryset=Issue.objects.filter(updated_at__date__gte=now_date-timedelta(30), status__title__iexact='done')
+
+
+2) Задачи, имеющие один из указанных статусов И один из указанных типов (в запросе укажите 2 любых названия типа и 2 названия статуса, которые есть в вашей базе).
+from webapp.models import *
+queryset = Issue.objects.filter(status__title__in=("Done", "New"), type__title__in=("Task", "Bug")).distinct()
+
+
+3) Задачи, в названии которых содержится слово "bug" в любом регистре или относящиеся к типу "Баг", имеющие НЕ закрытый статус.
+
+queryset = (Issue.objects.filter(summary__icontains=("bug"))|Issue.objects.filter(type__title__iexact=("bug"))).exclude(status__title__iexact=("done")).distinct()
+
+
+
