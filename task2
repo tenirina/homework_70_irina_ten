@@ -17,4 +17,26 @@ queryset = Issue.objects.filter(status__title__in=("Done", "New"), type__title__
 queryset = (Issue.objects.filter(summary__icontains=("bug"))|Issue.objects.filter(type__title__iexact=("bug"))).exclude(status__title__iexact=("done")).distinct()
 
 
+Бонус.
 
+1) Для всех задач только следующие поля: id, название задачи, название типа и название статуса.
+
+queryset = Issue.objects.all().values('id','summary', 'type__title', 'status__title').
+
+2) Задачи, где краткое описание совпадает с полным.
+
+from django.db.models import F
+
+queryset = Issue.objects.filter(description=F('summary'))
+
+3) Количество задач по каждому типу.
+    
+from django.db.models import Count 
+    
+type=Type.objects.annotate(num_task=Count("issue"))
+
+type[0].num_task
+
+type[1].num_task
+
+type[2].num_task
