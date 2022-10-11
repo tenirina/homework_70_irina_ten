@@ -8,3 +8,5 @@ class Issue(models.Model):
     updated_at = models.DateTimeField(verbose_name='Date of updates', auto_now=True)
     status = models.ForeignKey(verbose_name="Status", to='webapp.Status', related_name='issue', on_delete=models.CASCADE)
     type = models.ManyToManyField(to='webapp.Type', related_name='issue', default='task')
+    deleted_at = models.DateTimeField(verbose_name='Date of delete', null=True, default=None)
+    is_deleted = models.BooleanField(verbose_name="Delete", default=False, null=False)

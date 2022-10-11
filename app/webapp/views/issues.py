@@ -19,15 +19,13 @@ class AddView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        stats = []
-        for el in Status.objects.all():
-            stats.append((el.pk, el.title))
-        context['statuses'] = stats
-        types = []
-        for el in Type.objects.all():
-            types.append(el)
-        context['types'] = types
         return context
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        form = IssueForm()
+        context['form'] = form
+        return self.render_to_response(context)
 
     def post(self, request, *args, **kwargs):
         form = IssueForm(request.POST)
@@ -55,14 +53,6 @@ class UpdateView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        stats = []
-        for el in Status.objects.all():
-            stats.append((el.pk, el.title))
-        context['statuses'] = stats
-        types = []
-        for el in Type.objects.all():
-            types.append(el)
-        context['types'] = types
         context['issue'] = get_object_or_404(Issue, pk=kwargs['pk'])
         return context
 
