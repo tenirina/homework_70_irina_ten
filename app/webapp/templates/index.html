@@ -15,6 +15,9 @@
                       </div>
                     </div>
                 {% endfor %}
+                 {% if is_paginated %}
+                    {% include 'partial/pagination.html' %}
+                {% endif %}
             </div>
         {% else %}
             <h2>Add issue</h2>
