@@ -50,3 +50,9 @@ class IssueForm(forms.ModelForm):
         fields = ['summary', 'description', 'status', 'type']
 
 
+class SearchForm(forms.Form):
+    search_value = forms.CharField(
+        required=False,
+        label='Search',
+        max_length=100
+    )
