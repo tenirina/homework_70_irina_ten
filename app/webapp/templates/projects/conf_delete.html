@@ -3,7 +3,7 @@
 
 <div class="container">
      <h2> Delete project?</h2>
-     <p>You can delete a project only if it has no tasks!</p>
+     <p>If you delete an object, its tasks will also be deleted!</p>
      {% include 'partial/card_project.html' %}
      <form data-actions-icnt="{% url 'project_delete' project.pk %}" method="POST">
           {% csrf_token %}

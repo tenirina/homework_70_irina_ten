@@ -9,11 +9,11 @@ class Issue(models.Model):
     description = models.TextField(verbose_name="Description", max_length=1000, null=True)
     created_at = models.DateTimeField(verbose_name='Date of created', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='Date of updates', auto_now=True)
-    status = models.ForeignKey(verbose_name="Status", to='webapp.Status', related_name='issue', on_delete=models.CASCADE, default=Status.objects.first().pk)
+    status = models.ForeignKey(verbose_name="Status", to='webapp.Status', related_name='issue', on_delete=models.CASCADE)
     type = models.ManyToManyField(to='webapp.Type', related_name='issue', default='task')
     deleted_at = models.DateTimeField(verbose_name='Date of delete', null=True, default=None)
     is_deleted = models.BooleanField(verbose_name="Delete", default=False, null=False)
-    project = models.ForeignKey(verbose_name='Project', to='webapp.Project', related_name='issue', on_delete=models.CASCADE, default=Project.objects.first().pk)
+    project = models.ForeignKey(verbose_name='Project', to='webapp.Project', related_name='issue', on_delete=models.CASCADE)
 
     def delete(self, using=None, keep_parents=False):
         self.deleted_at = timezone.now()
