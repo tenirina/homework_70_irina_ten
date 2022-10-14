@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<div class="container">
+     <h2> Delete project?</h2>
+     <p>You can delete a project only if it has no tasks!</p>
+     {% include 'partial/card_project.html' %}
+     <form data-actions-icnt="{% url 'project_delete' project.pk %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-secondary">Delete</button>
+          <a type="submit" class="btn btn-secondary" href="{% url 'projects_list' %}">Cancel</a>
+     </form>
+</div>
+
+{% endblock %}

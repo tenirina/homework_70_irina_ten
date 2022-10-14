@@ -5,7 +5,9 @@
           <p class="card-text" name="started_at">{{ project.started_at }}</p>
           <p class="card-text" name="finished_at">{{ project.finished_at }}</p>
            <h5>Issues: </h5>
-           <a href="{% url 'project_issue_create' project.pk %}" class="btn btn-secondary">Create issue</a>
+           {% if button_text %}
+                <a href="{% url 'project_issue_create' project.pk %}" class="btn btn-secondary">{{button_text}}</a>
+           {% endif %}
            {% for issue in issues %}
                <div class="container">
                    {% include 'partial/card_form.html' %}

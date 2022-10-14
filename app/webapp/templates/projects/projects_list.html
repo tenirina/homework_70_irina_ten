@@ -11,7 +11,7 @@
                         <p class="card-text">{{ el.started_at }}</p>
                         <p class="card-text">{{ el.finished_at }}</p>
                         <a href="{% url 'update_project' el.pk %}" class="btn btn-secondary">Update project</a>
-                        <a href="{% url 'delete_issue' el.pk %}" class="btn btn-secondary">Delete project</a>
+                        <a href="{% url 'project_delete' el.pk %}" class="btn btn-secondary">Delete project</a>
                       </div>
                     </div>
                     {% empty %}

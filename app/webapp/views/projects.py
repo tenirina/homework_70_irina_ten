@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect
-from django.urls import reverse
-from django.views.generic import ListView, UpdateView, DetailView, CreateView
+from django.urls import reverse, reverse_lazy
+from django.views.generic import ListView, UpdateView, DetailView, CreateView, DeleteView
 
 from webapp.forms import ProjectForm, ProjectIssueForm
 from webapp.models import Project, Issue
@@ -58,3 +58,16 @@ class ProjectIssueCreateView(CreateView):
         issue.save()
         return redirect("project_detail", pk=project.pk)
 
+
+class ProjectDeleteView(DeleteView):
+    template_name = "projects/conf_delete.html"
+    model = Project
+    success_url = reverse_lazy('projects_list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        project = self.object
+        issues = project.issue.filter(is_deleted=False)
+        print(issues)
+        context['issues'] = issues
+        return context
