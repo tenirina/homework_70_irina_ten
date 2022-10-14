@@ -13,7 +13,7 @@ class Issue(models.Model):
     type = models.ManyToManyField(to='webapp.Type', related_name='issue', default='task')
     deleted_at = models.DateTimeField(verbose_name='Date of delete', null=True, default=None)
     is_deleted = models.BooleanField(verbose_name="Delete", default=False, null=False)
-    project = models.ForeignKey(verbose_name='Project', to='webapp.Project', related_name='issue', on_delete=models.PROTECT, default=Project.objects.first().pk)
+    project = models.ForeignKey(verbose_name='Project', to='webapp.Project', related_name='issue', on_delete=models.CASCADE, default=Project.objects.first().pk)
 
     def delete(self, using=None, keep_parents=False):
         self.deleted_at = timezone.now()
