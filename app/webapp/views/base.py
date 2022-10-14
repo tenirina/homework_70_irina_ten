@@ -8,7 +8,7 @@ from webapp.models import Issue, Status
 
 
 class IndexView(ListView):
-    template_name = 'index.html'
+    template_name = 'issues/index.html'
     model = Issue
     context_object_name = 'issues'
     paginate_by = 3

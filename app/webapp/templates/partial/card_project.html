@@ -1,0 +1,19 @@
+  <div class="card">
+       <div class="card-body">
+          <h4 class="card-title" name="title">{{ project.title }}</h4>
+          <p class="card-text" name="description">{{ project.description }}</p>
+          <p class="card-text" name="started_at">{{ project.started_at }}</p>
+          <p class="card-text" name="finished_at">{{ project.finished_at }}</p>
+           <h5>Issues: </h5>
+           {% for issue in issues %}
+               <div class="container">
+                   {% include 'partial/card_form.html' %}
+                   <a href="{% url 'issue_detail' issue.pk %}" class="btn btn-secondary">View issue</a>
+                   <a href="{% url 'update_issue' issue.pk %}" class="btn btn-secondary">Update issue</a>
+                   <a href="{% url 'delete_issue' issue.pk %}" class="btn btn-secondary">Delete issue</a>
+               </div>
+           {% empty %}
+                <p>No issues yet.</p>
+           {% endfor %}
+       </div>
+ </div>

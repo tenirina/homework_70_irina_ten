@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import BaseValidator
 from django.forms import widgets
 
-from webapp.models import Issue, Status, Type
+from webapp.models import Issue, Status, Type, Project
 
 
 def max_length_validator(string):
@@ -44,10 +44,14 @@ class IssueForm(forms.ModelForm):
     type = forms.ModelMultipleChoiceField(
         queryset=Type.objects.all(),
         label="Type")
+    project = forms.ModelChoiceField(
+        queryset=Project.objects.all(),
+        label="Project"
+    )
 
     class Meta:
         model = Issue
-        fields = ['summary', 'description', 'status', 'type']
+        fields = ['summary', 'description', 'status', 'type', 'project']
 
 
 class SearchForm(forms.Form):
@@ -56,3 +60,27 @@ class SearchForm(forms.Form):
         label='Search',
         max_length=100
     )
+
+
+class ProjectForm(forms.ModelForm):
+    title = forms.CharField(
+        max_length=1000,
+        required=True,
+        label="Title",
+        validators=(max_length_validator, ))
+    description = forms.CharField(
+        max_length=1000,
+        required=False,
+        label="Description",
+        widget=widgets.Textarea,
+        validators=(max_length_validator, ControlDescription()))
+    started_at = forms.DateField(
+        label="Date of started",
+        required=True)
+    finished_at = forms.DateField(
+        label="Date of finished",
+        required=False)
+
+    class Meta:
+        model = Project
+        fields = ['title', 'description', 'started_at', 'finished_at']

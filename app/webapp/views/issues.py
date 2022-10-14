@@ -1,17 +1,17 @@
 from django.urls import reverse, reverse_lazy
-from django.views.generic import TemplateView, DetailView, CreateView, UpdateView
+from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 
 from webapp.forms import IssueForm
 from webapp.models import Issue
 
 
 class IssueView(DetailView):
-    template_name = 'issue.html'
+    template_name = 'issues/issue.html'
     model = Issue
 
 
 class AddView(CreateView):
-    template_name = 'add.html'
+    template_name = 'issues/add.html'
     form_class = IssueForm
     model = Issue
 
@@ -20,7 +20,7 @@ class AddView(CreateView):
 
 
 class UpdateView(UpdateView):
-    template_name = 'update.html'
+    template_name = 'issues/update.html'
     form_class = IssueForm
     model = Issue
     context_object_name = 'issue'
@@ -29,7 +29,8 @@ class UpdateView(UpdateView):
         return reverse('issue_detail', kwargs={'pk': self.object.pk})
 
 
-class DeleteView(TemplateView):
-    template_name = 'confirm_delete.html'
+class DeleteView(DeleteView):
+    template_name = 'issues/confirm_delete.html'
     model = Issue
     success_url = reverse_lazy('index')
+

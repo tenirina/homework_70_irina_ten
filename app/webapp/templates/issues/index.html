@@ -11,6 +11,7 @@
                         <h5 class="card-title">{{ el.description }}</h5>
                         <p class="card-text">{{ el.status.title }}</p>
                         <p class="card-text">{% for type in el.type.all %}{{ type.title }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+                        <p class="card-text">{{ el.project.title }}</p>
                         <a href="{% url 'update_issue' el.pk %}" class="btn btn-secondary">Update issue</a>
                         <a href="{% url 'delete_issue' el.pk %}" class="btn btn-secondary">Delete issue</a>
                       </div>

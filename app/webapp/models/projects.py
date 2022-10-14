@@ -10,3 +10,6 @@ class Project(models.Model):
     updated_at = models.DateTimeField(verbose_name='Date of updates', auto_now=True)
     deleted_at = models.DateTimeField(verbose_name='Date of delete', null=True, default=None)
     is_deleted = models.BooleanField(verbose_name="Delete", default=False, null=False)
+
+    def __str__(self):
+        return self.title

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+     <div class="container">
+         <br>
+            <div class="row">
+                {% for el in projects %}
+                    <div class="card block">
+                      <h5 class="card-header"><a href="{% url 'project_detail' el.pk %}">{{ el.title }}</a></h5>
+                      <div class="card-body">
+                        <h5 class="card-title">{{ el.description }}</h5>
+                        <p class="card-text">{{ el.started_at }}</p>
+                        <p class="card-text">{{ el.finished_at }}</p>
+                        <a href="{% url 'update_project' el.pk %}" class="btn btn-secondary">Update project</a>
+                        <a href="{% url 'delete_issue' el.pk %}" class="btn btn-secondary">Delete project</a>
+                      </div>
+                    </div>
+                    {% empty %}
+                        <p>Projects not found</p>
+                {% endfor %}
+                 {% if is_paginated %}
+                    {% include 'partial/pagination.html' %}
+                {% endif %}
+            </div>
+     </div>
+{% endblock %}
