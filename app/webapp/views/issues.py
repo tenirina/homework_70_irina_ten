@@ -1,3 +1,5 @@
+from django.http import Http404
+from django.shortcuts import get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 
@@ -8,6 +10,13 @@ from webapp.models import Issue
 class IssueView(DetailView):
     template_name = 'issues/issue.html'
     model = Issue
+
+    def get_object(self, **kwargs):
+        pk = self.kwargs.get(self.pk_url_kwarg)
+        issue = get_object_or_404(Issue, pk=pk)
+        if issue.is_deleted:
+            raise Http404("Issue deleted")
+        return issue
 
 
 class AddView(CreateView):
