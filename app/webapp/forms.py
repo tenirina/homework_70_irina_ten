@@ -61,6 +61,9 @@ class SearchForm(forms.Form):
         max_length=100
     )
 
+    class Meta:
+        fields = ['search_value']
+
 
 class ProjectForm(forms.ModelForm):
     title = forms.CharField(

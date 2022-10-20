@@ -2,7 +2,10 @@
 {% block main %}
      <div class="container">
          <br>
-          
+         <form action="{% url 'projects_search' %}" method="get">
+             <input type="text" name="search_value">
+             <button type="submit">Search</button>
+         </form>
             <div class="row">
                 {% for el in projects %}
                     <div class="card block">
