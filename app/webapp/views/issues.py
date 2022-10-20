@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -7,7 +8,7 @@ from webapp.forms import IssueForm
 from webapp.models import Issue
 
 
-class IssueView(DetailView):
+class IssueView(LoginRequiredMixin, DetailView):
     template_name = 'issues/issue.html'
     model = Issue
 
@@ -19,7 +20,7 @@ class IssueView(DetailView):
         return issue
 
 
-class AddView(CreateView):
+class AddView(LoginRequiredMixin, CreateView):
     template_name = 'issues/add.html'
     form_class = IssueForm
     model = Issue
@@ -28,7 +29,7 @@ class AddView(CreateView):
         return reverse('issue_detail', kwargs={'pk': self.object.pk})
 
 
-class UpdateView(UpdateView):
+class UpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'issues/update.html'
     form_class = IssueForm
     model = Issue
@@ -38,7 +39,7 @@ class UpdateView(UpdateView):
         return reverse('issue_detail', kwargs={'pk': self.object.pk})
 
 
-class DeleteView(DeleteView):
+class DeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'issues/confirm_delete.html'
     model = Issue
     success_url = reverse_lazy('projects_list')

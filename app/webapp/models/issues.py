@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-from webapp.models import Status, Project
-
 
 class Issue(models.Model):
     summary = models.CharField(verbose_name='Summary', max_length=200, null=False, blank=False)

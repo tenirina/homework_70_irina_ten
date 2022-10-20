@@ -17,15 +17,21 @@
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="{% url 'projects_list' %}">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="{% url 'project_create' %}">Create project</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="{% url 'index' %}">List issues</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="{% url 'add_issue' %}">Create issue</a>
-            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="{% url 'project_create' %}">Create project</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="{% url 'index' %}">List issues</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="{% url 'add_issue' %}">Create issue</a>
+                </li>
+                <li class="menu-right"><a href="{% url 'logout' %}" class="nav-link">Выход</a></li>
+                <li class="menu-right">Привет, {{ user.username }}!</li>
+           {% else %}
+               <li class="menu-right"><a href="{% url 'login' %}" class="nav-link">Вход</a></li>
+           {% endif %}
           </ul>
         </div>
       </div>

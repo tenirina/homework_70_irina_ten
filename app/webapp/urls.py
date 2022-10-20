@@ -4,6 +4,7 @@ from webapp.views.base import IndexView
 from webapp.views.issues import IssueView, AddView, UpdateView, DeleteView
 from webapp.views.projects import ProjectsView, ProjectUpdateView, ProjectView, ProjectCreateView, \
     ProjectIssueCreateView, ProjectDeleteView
+from webapp.views.search import SearchView
 
 urlpatterns = [
     path("", ProjectsView.as_view(), name="projects_list"),
@@ -18,4 +19,5 @@ urlpatterns = [
     path("issues/create", AddView.as_view(), name="add_issue"),
     path("issues/<int:pk>/update", UpdateView.as_view(), name="update_issue"),
     path("issues/<int:pk>/delete", DeleteView.as_view(), name="delete_issue"),
+    path("projects/search", SearchView.as_view, name='projects_search')
 ]
