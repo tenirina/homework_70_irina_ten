@@ -7,8 +7,10 @@
      {% include 'partial/card_project.html' %}
      <form data-actions-icnt="{% url 'project_delete' project.pk %}" method="POST">
           {% csrf_token %}
-          <button type="submit" class="btn btn-secondary">Delete</button>
-          <a type="submit" class="btn btn-secondary" href="{% url 'projects_list' %}">Cancel</a>
+          {% if user.is_authenticated %}
+               <button type="submit" class="btn btn-secondary">Delete</button>
+               <a type="submit" class="btn btn-secondary" href="{% url 'projects_list' %}">Cancel</a>
+          {% endif %}
      </form>
 </div>
 

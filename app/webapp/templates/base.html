@@ -27,10 +27,14 @@
                 <li class="nav-item">
                   <a class="nav-link " aria-current="page" href="{% url 'add_issue' %}">Create issue</a>
                 </li>
-                <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Sign out</a></li>
-                <li class="nav-item">Hi, {{ user.username }}!</li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'logout' %}">Sign out</a>
+                </li>
+                <li class="nav-item"> <span class="nav-link"> Hi, {{ user.username }}!</span></li>
            {% else %}
-               <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Sign in</a></li>
+               <li class="nav-item">
+                   <a class="nav-link " href="{% url 'login' %}">Sign in</a>
+               </li>
            {% endif %}
           </ul>
         </div>

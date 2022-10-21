@@ -2,20 +2,19 @@
 {% block main %}
      <div class="container">
          <br>
-         <form action="{% url 'projects_search' %}" method="get">
-             <input type="text" name="search_value">
-             <button type="submit">Search</button>
-         </form>
+          {% include 'partial/search.html' %}
             <div class="row">
                 {% for el in projects %}
                     <div class="card block">
                       <h5 class="card-header"><a href="{% url 'project_detail' el.pk %}">{{ el.title }}</a></h5>
                       <div class="card-body">
-                        <h5 class="card-title">{{ el.description }}</h5>
-                        <p class="card-text">{{ el.started_at }}</p>
-                        <p class="card-text">{{ el.finished_at }}</p>
-                        <a href="{% url 'update_project' el.pk %}" class="btn btn-secondary">Update project</a>
-                        <a href="{% url 'project_delete' el.pk %}" class="btn btn-secondary">Delete project</a>
+                            <h5 class="card-title">{{ el.description }}</h5>
+                            <p class="card-text">{{ el.started_at }}</p>
+                            <p class="card-text">{{ el.finished_at }}</p>
+                            {% if user.is_authenticated %}
+                                <a href="{% url 'update_project' el.pk %}" class="btn btn-secondary">Update project</a>
+                                <a href="{% url 'project_delete' el.pk %}" class="btn btn-secondary">Delete project</a>
+                            {% endif %}
                       </div>
                     </div>
                     {% empty %}

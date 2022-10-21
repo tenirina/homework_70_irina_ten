@@ -14,7 +14,7 @@ class SearchEngine(ListView):
         query = Q(title__icontains=self.search_value)
         return query
 
-    def get(self, request, *args, kwargs):
+    def get(self, request, *args, **kwargs):
         self.form = self.get_search_form()
         self.search_value = self.get_search_value()
         return super().get(request, *args, **kwargs)
@@ -31,7 +31,7 @@ class SearchEngine(ListView):
         if self.search_value:
             query = Q()
             query_list = [
-                Q({f'{key}__{value}': self.search_value})
+                Q(**{f'{key}__{value}': self.search_value})
                 for key, value in self.search_fields.items()
             ]
             for query_part in query_list:
@@ -44,13 +44,12 @@ class SearchEngine(ListView):
 
     def get_search_value(self):
         if self.form.is_valid():
-            print(f"jdjjdjjdjjd{self.form}")
-            return self.form.cleaned_data['search']
+            return self.form.cleaned_data['search_value']
         return None
 
 
 class SearchView(SearchEngine):
-    template_name = '.html'
+    template_name = 'projects/projects_list.html'
     model = Project
     context_object_name = 'projects'
     ordering = ('updated_at')

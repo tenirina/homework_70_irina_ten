@@ -12,8 +12,10 @@
                <div class="container">
                    {% include 'partial/card_form.html' %}
                    <a href="{% url 'issue_detail' issue.pk %}" class="btn btn-secondary">View issue</a>
-                   <a href="{% url 'update_issue' issue.pk %}" class="btn btn-secondary">Update issue</a>
-                   <a href="{% url 'delete_issue' issue.pk %}" class="btn btn-secondary">Delete issue</a>
+                   {% if user.is_authenticated %}
+                       <a href="{% url 'update_issue' issue.pk %}" class="btn btn-secondary">Update issue</a>
+                       <a href="{% url 'delete_issue' issue.pk %}" class="btn btn-secondary">Delete issue</a>
+                   {% endif %}
                </div>
            {% empty %}
                 <p>No issues yet.</p>
