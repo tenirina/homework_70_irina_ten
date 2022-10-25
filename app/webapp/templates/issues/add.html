@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block main %}
-
-<h1>New issue</h1>
-<form data-actions-icnt="{% url 'add_issue' %}" method="POST">
-    {% include 'partial/todo_form.html' with button_text="Create" %}
-</form>
-
+<div class="container">
+    <h1>New issue</h1>
+    <form data-actions-icnt="{% url 'add_issue' %}" method="POST">
+        {% include 'partial/todo_form.html' with button_text="Create" %}
+    </form>
+</div>
 {% endblock %}

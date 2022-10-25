@@ -11,5 +11,3 @@ class IndexView(ListView):
     paginate_by = 3
     paginate_orphans = 1
     queryset = Issue.objects.exclude(is_deleted=True)
-
-
