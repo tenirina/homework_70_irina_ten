@@ -8,7 +8,7 @@
            <a href="{% url 'project_user_create' project.pk %}" class="btn btn-secondary">Add user</a>
            {% if users %}
                 {% for user in users %}
-                    <p> {{project.users.username}}</p>
+                    <p> {{ user }} </p>
                 {% endfor %}
            {% else %}
                 <p>No users have been added to this project yet</p>

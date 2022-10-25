@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import BaseValidator
 from django.forms import widgets
@@ -93,3 +94,10 @@ class ProjectIssueForm(forms.ModelForm):
     class Meta:
         model = Issue
         fields = ['summary', 'description', 'status', 'type']
+
+
+class UserForm(forms.Form):
+    users = forms.CharField(
+        label="Users",
+        required=True
+    )

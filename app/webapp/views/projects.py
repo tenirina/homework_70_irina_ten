@@ -72,7 +72,3 @@ class ProjectDeleteView(LoginRequiredMixin, DeleteView):
         print(issues)
         context['issues'] = issues
         return context
-
-
-class ProjectsUsersCreateView():
-    pass
