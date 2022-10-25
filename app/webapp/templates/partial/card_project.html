@@ -4,6 +4,15 @@
           <p class="card-text" name="description">{{ project.description }}</p>
           <p class="card-text" name="started_at">{{ project.started_at }}</p>
           <p class="card-text" name="finished_at">{{ project.finished_at }}</p>
+           <h5>Users: </h5>
+           <a href="{% url 'project_user_create' project.pk %}" class="btn btn-secondary">Add user</a>
+           {% if users %}
+                {% for user in users %}
+                    <p> {{project.users.username}}</p>
+                {% endfor %}
+           {% else %}
+                <p>No users have been added to this project yet</p>
+           {% endif %}
            <h5>Issues: </h5>
            {% if button_text %}
                 <a href="{% url 'project_issue_create' project.pk %}" class="btn btn-secondary">{{button_text}}</a>

@@ -86,7 +86,7 @@ class ProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
-        fields = ['title', 'description', 'started_at', 'finished_at']
+        fields = ['title', 'description', 'started_at', 'finished_at', 'users']
 
 
 class ProjectIssueForm(forms.ModelForm):

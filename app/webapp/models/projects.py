@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -10,6 +11,7 @@ class Project(models.Model):
     updated_at = models.DateTimeField(verbose_name='Date of updates', auto_now=True)
     deleted_at = models.DateTimeField(verbose_name='Date of delete', null=True, default=None)
     is_deleted = models.BooleanField(verbose_name="Delete", default=False, null=False)
+    users = models.ManyToManyField(to=User, related_name='projects', blank=True)
 
     def __str__(self):
         return self.title
