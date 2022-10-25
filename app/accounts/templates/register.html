@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+{% block main %}
+
+    <div class="container">
+        <form data-actions-icnt="{% url 'projects_list' %}" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% bootstrap_button button_type="submit" button_class="btn-secondary" content='Register' %}
+        </form>
+    </div>
+
+
+{% endblock %}
+
